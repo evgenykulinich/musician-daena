@@ -1,0 +1,41 @@
+@import "vars";
+
+@mixin background {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+@mixin container {
+  position: relative;
+  flex: 1;
+  padding: 30px 0;
+
+  @media (width < $width-sm) {
+    padding: 10px 0;
+  }
+}
+
+@mixin link-animation($color) {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 3px;
+
+    background-color: $color;
+    transition: all 0.2s ease-in-out;
+
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
