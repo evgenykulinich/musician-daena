@@ -1,3 +1,5 @@
+import { releaseList } from '@/data/releaseList'
+
 export const translation = {
   socials: {
     vk: 'https://vk.com/daethisyou',
@@ -41,7 +43,8 @@ export const translation = {
       description: 'андеграундный caucasian kid',
       artist: 'даена',
       discography: 'дискография',
-      video: 'видео'
+      video: 'видео',
+      listen: 'Слушать релиз'
     },
     discography: {
       path: 'discography',
@@ -57,7 +60,7 @@ export const translation = {
       title: 'даена • видео',
       description: 'видеоклипы и сниппеты',
       artist: 'даена',
-      tag: ' • видео',
+      tag: ' • видео'
     }
   },
   release: {
