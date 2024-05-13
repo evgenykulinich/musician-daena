@@ -129,7 +129,6 @@ export default function DiscographyPage() {
               src="https://open.spotify.com/embed/artist/65J0xSmKmX3ENY7JYyTAUQ?utm_source=generator&theme=0"
               frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
             ></iframe>
           </div>
           <div>
@@ -138,7 +137,6 @@ export default function DiscographyPage() {
               className={ styles.yandex }
               frameBorder="0"
               src="https://music.yandex.ru/iframe/playlist/yamusic-bestsongs/8979279"
-              loading="lazy"
             ></iframe>
           </div>
         </div>

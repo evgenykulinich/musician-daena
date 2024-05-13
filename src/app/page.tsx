@@ -15,12 +15,24 @@ export default function HomePage() {
       <div className={ `${ styles.container } ${ styles.wrapper }` }>
         <div className={ styles.header }>
           <p className={ styles.artist }>{ translation.page.main.artist }</p>
-          <Link
-            className={ styles.discography }
-            href={ translation.page.discography.path }
-          >
-            { translation.page.main.discography }
-          </Link>
+          <div className={ styles.art }>
+            <span>
+              <Link
+                className={ styles.discography }
+                href={ translation.page.discography.path }
+              >
+                { translation.page.main.discography }
+              </Link>
+            </span>
+            <span>
+              <Link
+                className={ styles.video }
+                href={ translation.page.video.path }
+              >
+                { translation.page.main.video }
+              </Link>
+            </span>
+          </div>
         </div>
 
         <div className={ styles.socials }>
