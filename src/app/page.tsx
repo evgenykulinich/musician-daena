@@ -9,7 +9,7 @@ import { releaseList } from '@/data/releaseList'
 export const metadata: Metadata = {
   title: translation.page.main.title,
   description: translation.page.main.description,
-  metadataBase: new URL(`${ process.env.NEXT_PUBLIC_BASE_URL }`),
+  metadataBase: new URL('https://musician-daena.vercel.app/'),
   openGraph: {
     images: [
       {
