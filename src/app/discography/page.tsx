@@ -161,6 +161,12 @@ export default function DiscographyPage() {
             <img src={ translation.icons.itunes } title="itunes" alt="itunes"/>
           </a>
         </div>
+
+        <div className={ styles.footer }>
+          <Link href={ translation.page.main.path }>
+            { translation.page.video.artist }
+          </Link>
+        </div>
       </div>
     </main>
   )

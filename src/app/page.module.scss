@@ -19,6 +19,7 @@
 .container {
   @include container;
 }
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -84,7 +85,7 @@
     max-width: 100svw;
     width: 100%;
     padding: 30px 15px 10px;
-    box-shadow: inset 0px -85px 10px -20px rgba($black, 0.75);
+    box-shadow: inset 0px -85px 10px -20px rgba($black, 0.85);
   }
 
   & img {
