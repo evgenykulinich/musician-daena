@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 import styles from './page.module.scss'
+import Socials from '@/components/socials/Socials'
 import { translation } from '@/constants/translation'
 
 export const metadata: Metadata = {
@@ -36,24 +37,7 @@ export default function HomePage() {
         </div>
 
         <div className={ styles.socials }>
-          <a href={ translation.socials.vk } target="_blank">
-            <img src={ translation.icons.vk } title="vk" alt="vk"/>
-          </a>
-          <a href={ translation.socials.inst } target="_blank">
-            <img src={ translation.icons.inst } title="instagram" alt="instagram"/>
-          </a>
-          <a href={ translation.socials.youtube } target="_blank">
-            <img src={ translation.icons.youtube } title="youtube" alt="youtube"/>
-          </a>
-          <a href={ translation.socials.yamusic } target="_blank">
-            <img src={ translation.icons.yamusic } title="yandex.music" alt="yandex.music"/>
-          </a>
-          <a href={ translation.socials.spotify } target="_blank">
-            <img src={ translation.icons.spotify } title="spotify" alt="spotify"/>
-          </a>
-          <a href={ translation.socials.itunes } target="_blank">
-            <img src={ translation.icons.itunes } title="itunes" alt="itunes"/>
-          </a>
+          <Socials/>
         </div>
       </div>
 

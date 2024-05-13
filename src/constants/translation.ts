@@ -31,7 +31,9 @@ export const translation = {
   page: {
     layout: {
       title: 'даена',
-      description: 'андеграундный caucasian kid'
+      description: 'андеграундный caucasian kid',
+      goMain: '← даена',
+      copyright: '© даена, 2024'
     },
     main: {
       path: '/',
