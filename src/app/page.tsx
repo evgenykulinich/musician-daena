@@ -9,6 +9,13 @@ import { releaseList } from '@/data/releaseList'
 export const metadata: Metadata = {
   title: translation.page.main.title,
   description: translation.page.main.description,
+  openGraph: {
+    images: [
+      {
+        url: 'opengraph-image.jpg'
+      }
+    ]
+  }
 }
 
 export default function HomePage() {
