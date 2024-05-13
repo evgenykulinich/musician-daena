@@ -4,10 +4,14 @@ import Link from 'next/link'
 import styles from './page.module.scss'
 import Socials from '@/components/socials/Socials'
 import { translation } from '@/constants/translation'
+import { releaseList } from '@/data/releaseList'
 
 export const metadata: Metadata = {
   title: translation.page.main.title,
-  description: translation.page.main.description
+  description: translation.page.main.description,
+  openGraph: {
+
+  }
 }
 
 export default function HomePage() {
@@ -38,6 +42,19 @@ export default function HomePage() {
 
         <div className={ styles.socials }>
           <Socials/>
+        </div>
+
+        <div className={ styles.latest }>
+          <div className={ styles.contacts }>
+            <Socials/>
+          </div>
+          <span className={ styles.release }><Link
+
+            href={ releaseList[0].youtube }
+          >
+            { releaseList[0].title }
+          </Link></span>
+          <p className={ styles.listen }>{ translation.page.main.listen }</p>
         </div>
       </div>
 
