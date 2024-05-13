@@ -10,12 +10,26 @@
 }
 
 @mixin container {
-  position: relative;
-  flex: 1;
-  padding: 50px 0 0;
+  padding-inline: 40px;
 
   @media (width < $width-sm) {
-    padding: 20px 0 0;
+    padding-inline: 20px;
+  }
+}
+
+@mixin header-margin {
+  margin-top: 50px;
+
+  @media (width < $width-sm) {
+    margin-top: 25px;
+  }
+}
+
+@mixin zoom-animation($scale, $duration, $behavior) {
+  transition: transform $duration $behavior;
+
+  &:hover {
+    transform: scale($scale);
   }
 }
 
