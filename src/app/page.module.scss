@@ -1,29 +1,45 @@
 @import '/src/scss/mixins';
 @import '/src/scss/vars';
 
+.background {
+  @include background;
+}
+
 .main {
+  display: flex;
+  position: fixed;
+  inset: 0;
+
   @media (width < $width-sm) {
     box-shadow: $shadow;
     touch-action: none;
   }
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: $fz-lg;
-
-  & p {
-    font-weight: $fw-bold;
-    cursor: default;
-    user-select: none;
-  }
+.container {
+  @include container;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.music {
-  font-size: $fz-sm;
-  @include link-animation($white);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $fz-4;
+  @include header-margin;
+
+  .artist {
+    font-weight: $fw-bold;
+    user-select: none;
+  }
+
+  .discography {
+    font-size: $fz-3;
+    @include link-animation($white);
+  }
 }
 
 .socials {
@@ -36,27 +52,31 @@
 
   @media (width < $width-sm) {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
     top: unset;
+    bottom: 0;
+    left: 0;
     transform: unset;
     gap: unset;
-    bottom: 10px;
+
+    max-width: 100svw;
     width: 100%;
-    justify-content: space-between;
+    padding: 30px 15px 10px;
+    box-shadow: inset 0px -85px 10px -20px rgba($black, 0.75);
   }
 
   & img {
-    transition: transform 0.2s ease-in-out;
+    width: 35px;
+    @include zoom-animation(130%, 0.2s, ease-in-out);
+
+    @media (width < $width-sm) {
+      width: 30px;
+    }
   }
-
-  & img:hover {
-    transform: scale(1.3);
-  }
 }
 
-.background {
-  @include background;
-}
 
-.container {
-  @include container;
-}
+

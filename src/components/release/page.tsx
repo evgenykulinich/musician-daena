@@ -1,6 +1,9 @@
-import styles from './page.module.scss'
+'use client'
 
-interface CardProps {
+import styles from './page.module.scss'
+import { translation } from '@/constants/translation'
+
+interface ReleaseProps {
   filename: string
   release: string
   title: string
@@ -12,7 +15,7 @@ interface CardProps {
   itunes?: string
 }
 
-export function Card({
+export function Release({
   filename,
   release,
   title,
@@ -22,12 +25,12 @@ export function Card({
   yamusic,
   spotify,
   itunes
-}: CardProps) {
+}: ReleaseProps) {
   return (
-    <div className={ styles.card }>
-      <img src={ filename } alt="cover"/>
+    <div className={ styles.cardWrapper }>
+      <img className={ styles.cover } src={ filename } alt="cover"/>
       <div className={ styles.cardBody }>
-        <div>
+        <div className={ styles.description }>
           <p className={ styles.release }>{ release }</p>
           <p className={ styles.title }>{ title }</p>
           <p className={ styles.artist }>{ artist }</p>
@@ -36,16 +39,16 @@ export function Card({
 
         <div className={ styles.links }>
           <a href={ youtube } target="_blank">
-            <img src="icons/youtube.svg" alt="youtube" width="35px"/>
+            <img src={ translation.icons.youtube } alt="youtube"/>
           </a>
           <a href={ yamusic } target="_blank">
-            <img src="icons/yamusic.svg" alt="yamusic" width="35px"/>
+            <img src={ translation.icons.yamusic } alt="yamusic"/>
           </a>
           <a href={ spotify } target="_blank">
-            <img src="icons/spotify.svg" alt="spotify" width="35px"/>
+            <img src={ translation.icons.spotify } alt="spotify"/>
           </a>
           <a href={ itunes } target="_blank">
-            <img src="icons/itunes.svg" alt="itunes" width="35px"/>
+            <img src={ translation.icons.itunes } alt="itunes"/>
           </a>
         </div>
       </div>

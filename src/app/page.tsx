@@ -1,40 +1,52 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 import styles from './page.module.scss'
+import { translation } from '@/constants/translation'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: translation.page.main.title,
+  description: translation.page.main.description
+}
+
+export default function HomePage() {
   return (
     <main className={ styles.main }>
-      <div className={ styles.container }>
-        <div className={ styles.navigation }>
-          <p>даена</p>
-          <Link className={ styles.music } href="/music">дискография</Link>
+      <div className={ `${ styles.container } ${ styles.wrapper }` }>
+        <div className={ styles.header }>
+          <p className={ styles.artist }>{ translation.page.main.artist }</p>
+          <Link
+            className={ styles.discography }
+            href={ translation.page.discography.path }
+          >
+            { translation.page.main.discography }
+          </Link>
         </div>
 
         <div className={ styles.socials }>
-          <a href="https://vk.com/daethisyou" target="_blank">
-            <img src="icons/vk.svg" alt="vk" width="35px"/>
+          <a href={ translation.socials.vk } target="_blank">
+            <img src={ translation.icons.vk } title="vk" alt="vk"/>
           </a>
-          <a href="https://www.instagram.com/whosdaena/" target="_blank">
-            <img src="icons/insta.svg" alt="insta" width="35px"/>
+          <a href={ translation.socials.inst } target="_blank">
+            <img src={ translation.icons.inst } title="instagram" alt="instagram"/>
           </a>
-          <a href="https://www.youtube.com/@whosdaena" target="_blank">
-            <img src="icons/youtube.svg" alt="youtube" width="35px"/>
+          <a href={ translation.socials.youtube } target="_blank">
+            <img src={ translation.icons.youtube } title="youtube" alt="youtube"/>
           </a>
-          <a href="https://music.yandex.ru/artist/8979279" target="_blank">
-            <img src="icons/yamusic.svg" alt="yamusic" width="35px"/>
+          <a href={ translation.socials.yamusic } target="_blank">
+            <img src={ translation.icons.yamusic } title="yandex.music" alt="yandex.music"/>
           </a>
-          <a href="https://open.spotify.com/artist/65J0xSmKmX3ENY7JYyTAUQ" target="_blank">
-            <img src="icons/spotify.svg" alt="spotify" width="35px"/>
+          <a href={ translation.socials.spotify } target="_blank">
+            <img src={ translation.icons.spotify } title="spotify" alt="spotify"/>
           </a>
-          <a href="https://music.apple.com/ru/artist/%D0%B4%D0%B0%D0%B5%D0%BD%D0%B0/1553607758" target="_blank">
-            <img src="icons/itunes.svg" alt="itunes" width="35px"/>
+          <a href={ translation.socials.itunes } target="_blank">
+            <img src={ translation.icons.itunes } title="itunes" alt="itunes"/>
           </a>
         </div>
       </div>
 
       <video className={ styles.background } autoPlay muted loop playsInline>
-        <source src="background/main-background.mp4" type="video/mp4"/>
+        <source src={ translation.bg.mainBg } type="video/mp4"/>
       </video>
     </main>
   )

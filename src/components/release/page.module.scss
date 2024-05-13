@@ -1,0 +1,99 @@
+@import "src/scss/vars";
+@import "src/scss/mixins";
+
+.cardWrapper {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  @include zoom-animation(105%, 0.2s, ease-out);
+
+  @media (width < $width-sm) {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px) brightness(50%);
+    transition: all 0.4s ease;
+    padding: 20px 20px 20px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .description {
+    .release,
+    .year {
+      font-size: $fz-2;
+      opacity: 0.5;
+
+      @media (width < $width-sm) {
+        font-size: $fz-1;
+      }
+    }
+
+    .title {
+      font-size: $fz-4;
+      font-weight: $fw-bold;
+      margin-top: 25px;
+
+      @media (width < $width-sm) {
+        font-size: $fz-3;
+        margin-top: 20px;
+      }
+    }
+
+    .artist {
+      font-size: $fz-3;
+
+      @media (width < $width-sm) {
+        font-size: $fz-2;
+      }
+    }
+
+    .year {
+      margin-top: 20px;
+
+      @media (width < $width-sm) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+
+    @media (width < $width-sm) {
+      gap: 25px;
+    }
+
+    & img {
+      width: 35px;
+      @include zoom-animation(130%, 0.2s, ease-in-out);
+
+      @media (width < $width-sm) {
+        width: 25px;
+      }
+    }
+  }
+}

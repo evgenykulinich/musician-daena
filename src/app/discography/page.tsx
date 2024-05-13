@@ -2,25 +2,31 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import styles from './page.module.scss'
-import { Card } from '@/components/card/page'
+import { translation } from '@/constants/translation'
+import { Release } from '@/components/release/page'
 
 export const metadata: Metadata = {
-  title: 'даена • дискография'
+  title: translation.page.discography.title,
+  description: translation.page.discography.description
 }
 
-export default function MusicPage() {
+export default function DiscographyPage() {
   return (
     <main className={ styles.main }>
       <div className={ styles.container }>
-        <div className={ styles.navigation }>
-          <Link className={ styles.logo } href="/">даена</Link>
-          <span>&nbsp;• дискография</span>
-        </div>
-
-        <div className={ styles.discography }>
-          <Card
-            filename="covers/melanholiya.jpg"
-            release="Feat"
+        <Link
+          className={ styles.artist }
+          href={ translation.page.main.path }
+        >
+          { translation.page.discography.artist }
+        </Link>
+        <span className={ styles.tag }>{ translation.page.discography.tag }</span>
+      </div>
+      <div className={ styles.wrapper }>
+        <div className={ `${ styles.container } ${ styles.discography }` }>
+          <Release
+            filename={ translation.cover.melanholiya }
+            release={ translation.release.feat }
             title="Меланхолия"
             artist="TumaniYO, даена"
             year={ 2024 }
@@ -30,9 +36,9 @@ export default function MusicPage() {
             itunes="https://music.apple.com/ru/album/%D0%BC%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F-feat-%D0%B4%D0%B0%D0%B5%D0%BD%D0%B0/1735269739?i=1735269745"
           />
 
-          <Card
-            filename="covers/eastwest.jpg"
-            release="Album"
+          <Release
+            filename={ translation.cover.eastwest }
+            release={ translation.release.album }
             title="eastwest"
             artist="даена"
             year={ 2023 }
@@ -42,9 +48,9 @@ export default function MusicPage() {
             itunes="https://music.apple.com/ru/album/eastwest/1694404422"
           />
 
-          <Card
-            filename="covers/malh.jpg"
-            release="Single"
+          <Release
+            filename={ translation.cover.malh }
+            release={ translation.release.single }
             title="малх"
             artist="даена"
             year={ 2023 }
@@ -54,9 +60,9 @@ export default function MusicPage() {
             itunes="https://music.apple.com/ru/album/%D0%BC%D0%B0%D0%BB%D1%85/1675066036?i=1675066524"
           />
 
-          <Card
-            filename="covers/truth.jpg"
-            release="Feat"
+          <Release
+            filename={ translation.cover.truth }
+            release={ translation.release.feat }
             title="Truth"
             artist="Rhita Nattah, даена"
             year={ 2023 }
@@ -66,9 +72,9 @@ export default function MusicPage() {
             itunes="https://music.apple.com/ru/album/truth/1660029772?i=1660029777"
           />
 
-          <Card
-            filename="covers/sberech.jpg"
-            release="Feat"
+          <Release
+            filename={ translation.cover.sberech }
+            release={ translation.release.feat }
             title="Сберечь меня"
             artist="Tamara, даена"
             year={ 2022 }
@@ -78,9 +84,9 @@ export default function MusicPage() {
             itunes="https://music.apple.com/ru/album/%D1%81%D0%B1%D0%B5%D1%80%D0%B5%D1%87%D1%8C-%D0%BC%D0%B5%D0%BD%D1%8F-feat-%D0%B4%D0%B0%D0%B5%D0%BD%D0%B0/1609583546?i=1609583960"
           />
 
-          <Card
-            filename="covers/ivory.jpg"
-            release="Feat"
+          <Release
+            filename={ translation.cover.ivory }
+            release={ translation.release.feat }
             title="Ivory"
             artist="Ollane, даена"
             year={ 2022 }
@@ -90,9 +96,9 @@ export default function MusicPage() {
             itunes="https://music.apple.com/ru/album/ivory-feat-%D0%B4%D0%B0%D0%B5%D0%BD%D0%B0/1608930924?i=1608931155"
           />
 
-          <Card
-            filename="covers/caucasiankid.jpg"
-            release="EP"
+          <Release
+            filename={ translation.cover.caucasiankid }
+            release={ translation.release.ep }
             title="caucasian kid"
             artist="даена"
             year={ 2021 }
@@ -102,9 +108,9 @@ export default function MusicPage() {
             itunes="https://music.apple.com/ru/album/caucasian-kid-ep/1580963063"
           />
 
-          <Card
-            filename="covers/troetochie.jpg"
-            release="Single"
+          <Release
+            filename={ translation.cover.troetochie }
+            release={ translation.release.single }
             title="троеточие"
             artist="даена"
             year={ 2021 }
@@ -116,47 +122,48 @@ export default function MusicPage() {
         </div>
 
         <div className={ styles.player }>
-          <iframe
-            className={ styles.spotifyPlayer }
-            src="https://open.spotify.com/embed/artist/65J0xSmKmX3ENY7JYyTAUQ?utm_source=generator&theme=0"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-
-          <iframe
-            className={ styles.yandexPlayer }
-            frameBorder="0"
-            src="https://music.yandex.ru/iframe/playlist/yamusic-bestsongs/8979279"
-            loading="lazy"
-          ></iframe>
+          <div>
+            <p className={ styles.platform }>{ translation.page.discography.spotify }</p>
+            <iframe
+              className={ styles.spotify }
+              src="https://open.spotify.com/embed/artist/65J0xSmKmX3ENY7JYyTAUQ?utm_source=generator&theme=0"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div>
+            <p className={ styles.platform }>{ translation.page.discography.yandex }</p>
+            <iframe
+              className={ styles.yandex }
+              frameBorder="0"
+              src="https://music.yandex.ru/iframe/playlist/yamusic-bestsongs/8979279"
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
 
-        <div className={ styles.socials }>
-          <a href="https://vk.com/daethisyou" target="_blank">
-            <img src="icons/vk.svg" alt="vk" width="30px"/>
+        <div className={ `${ styles.container } ${ styles.socials }` }>
+          <a href={ translation.socials.vk } target="_blank">
+            <img src={ translation.icons.vk } title="vk" alt="vk"/>
           </a>
-          <a href="https://www.instagram.com/whosdaena/" target="_blank">
-            <img src="icons/insta.svg" alt="insta" width="30px"/>
+          <a href={ translation.socials.inst } target="_blank">
+            <img src={ translation.icons.inst } title="instagram" alt="instagram"/>
           </a>
-          <a href="https://www.youtube.com/@whosdaena" target="_blank">
-            <img src="icons/youtube.svg" alt="youtube" width="30px"/>
+          <a href={ translation.socials.youtube } target="_blank">
+            <img src={ translation.icons.youtube } title="youtube" alt="youtube"/>
           </a>
-          <a href="https://music.yandex.ru/artist/8979279" target="_blank">
-            <img src="icons/yamusic.svg" alt="yamusic" width="30px"/>
+          <a href={ translation.socials.yamusic } target="_blank">
+            <img src={ translation.icons.yamusic } title="yandex.music" alt="yandex.music"/>
           </a>
-          <a href="https://open.spotify.com/artist/65J0xSmKmX3ENY7JYyTAUQ" target="_blank">
-            <img src="icons/spotify.svg" alt="spotify" width="30px"/>
+          <a href={ translation.socials.spotify } target="_blank">
+            <img src={ translation.icons.spotify } title="spotify" alt="spotify"/>
           </a>
-          <a href="https://music.apple.com/ru/artist/%D0%B4%D0%B0%D0%B5%D0%BD%D0%B0/1553607758" target="_blank">
-            <img src="icons/itunes.svg" alt="itunes" width="30px"/>
+          <a href={ translation.socials.itunes } target="_blank">
+            <img src={ translation.icons.itunes } title="itunes" alt="itunes"/>
           </a>
         </div>
       </div>
-
-      <video className={ styles.background } autoPlay muted loop playsInline>
-        <source src="background/main-background.mp4" type="video/mp4"/>
-      </video>
     </main>
   )
 }

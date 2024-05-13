@@ -1,23 +1,24 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat_Alternates } from 'next/font/google'
 
 import './globals.scss'
+import { translation } from '@/constants/translation'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Montserrat_Alternates({
+  subsets: ['cyrillic', 'latin'],
+  weight: ['400', '700']
+})
 
 export const metadata: Metadata = {
-  title: 'даена',
-  description: 'андеграундный caucasian kid'
+  title: translation.page.layout.title,
+  description: translation.page.layout.description
 }
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }:
+  Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-    <body className={ inter.className }>{ children }</body>
+    <html lang="ru">
+    <body className={ font.className }>{ children }</body>
     </html>
   )
 }
