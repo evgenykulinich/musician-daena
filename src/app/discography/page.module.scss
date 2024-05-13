@@ -10,40 +10,13 @@
   @include container;
 }
 
-.wrapper {
-  @media (width < $width-sm) {
-  }
-}
-
-.artist {
-  font-size: $fz-4;
-  font-weight: $fw-bold;
-  display: inline-block;
-  @include header-margin;
-  @include link-animation($white);
-}
-
-.tag {
-  font-size: $fz-4;
-  font-weight: $fw-reg;
-}
-
-.artist,
-.tag {
-  @media (width < $width-sm) {
-    font-size: $fz-3;
-  }
-}
-
 .discography {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-items: center;
   gap: 80px;
-  margin-top: 80px;
 
   @media (width < $width-sm) {
-    margin-top: 40px;
     gap: 40px;
   }
 }
@@ -90,53 +63,5 @@
       width: 100%;
       height: 600px;
     }
-  }
-}
-
-.socials {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 40px;
-  margin: 40px 0;
-  padding: 40px 0;
-
-  @media (width < $width-sm) {
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  &::after {
-    content: "";
-    width: 50px;
-    height: 2px;
-    border-radius: 8px;
-    background-color: rgba($white, 0.1);
-    position: absolute;
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 80px;
-  }
-
-  & img {
-    width: 35px;
-    @include zoom-animation(130%, 0.2s, ease-in-out);
-
-    @media (width < $width-sm) {
-      width: 30px;
-    }
-  }
-}
-
-.footer {
-  position: relative;
-  font-size: $fz-3;
-  text-align: center;
-  margin-bottom: 80px;
-
-  & a {
-    @include link-animation($white)
   }
 }

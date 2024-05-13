@@ -1,19 +1,6 @@
-'use client'
-
 import styles from './page.module.scss'
 import { translation } from '@/constants/translation'
-
-interface ReleaseProps {
-  filename: string
-  release: string
-  title: string
-  artist: string
-  year: number
-  youtube?: string
-  yamusic?: string
-  spotify?: string
-  itunes?: string
-}
+import { IRelease } from '@/data/releaseList'
 
 export function Release({
   filename,
@@ -25,7 +12,7 @@ export function Release({
   yamusic,
   spotify,
   itunes
-}: ReleaseProps) {
+}: IRelease) {
   return (
     <div className={ styles.cardWrapper }>
       <img className={ styles.cover } src={ filename } alt="cover"/>
@@ -39,16 +26,16 @@ export function Release({
 
         <div className={ styles.links }>
           <a href={ youtube } target="_blank">
-            <img src={ translation.icons.youtube } alt="youtube"/>
+            <img src={ translation.icons.youtube } title="youtube" alt="youtube"/>
           </a>
           <a href={ yamusic } target="_blank">
-            <img src={ translation.icons.yamusic } alt="yamusic"/>
+            <img src={ translation.icons.yamusic } title="yamusic" alt="yamusic"/>
           </a>
           <a href={ spotify } target="_blank">
-            <img src={ translation.icons.spotify } alt="spotify"/>
+            <img src={ translation.icons.spotify } title="spotify" alt="spotify"/>
           </a>
           <a href={ itunes } target="_blank">
-            <img src={ translation.icons.itunes } alt="itunes"/>
+            <img src={ translation.icons.itunes } title="itunes" alt="itunes"/>
           </a>
         </div>
       </div>
