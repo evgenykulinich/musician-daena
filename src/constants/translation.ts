@@ -38,7 +38,8 @@ export const translation = {
       title: 'даена',
       description: 'андеграундный caucasian kid',
       artist: 'даена',
-      discography: 'дискография'
+      discography: 'дискография',
+      video: 'видео'
     },
     discography: {
       path: 'discography',
@@ -48,6 +49,13 @@ export const translation = {
       tag: ' • дискография',
       spotify: 'Spotify',
       yandex: 'Яндекс Музыка'
+    },
+    video: {
+      path: 'video',
+      title: 'даена • видео',
+      description: 'видеоклипы и сниппеты',
+      artist: 'даена',
+      tag: ' • видео',
     }
   },
   release: {

@@ -28,17 +28,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   font-size: $fz-4;
   @include header-margin;
+
+  @media (width < $width-sm) {
+    font-size: $fz-3;
+  }
 
   .artist {
     font-weight: $fw-bold;
     user-select: none;
   }
 
-  .discography {
-    font-size: $fz-3;
-    @include link-animation($white);
+  .art {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    gap: 20px;
+
+    @media (width < $width-sm) {
+      gap: 15px;
+    }
+
+    .discography,
+    .video {
+      @include link-animation($white);
+    }
   }
 }
 
