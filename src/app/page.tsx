@@ -9,10 +9,11 @@ import { releaseList } from '@/data/releaseList'
 export const metadata: Metadata = {
   title: translation.page.main.title,
   description: translation.page.main.description,
+  metadataBase: new URL(`${ process.env.NEXT_PUBLIC_BASE_URL }`),
   openGraph: {
     images: [
       {
-        url: 'opengraph-image.jpg'
+        url: '/opengraph-image.jpg'
       }
     ]
   }
