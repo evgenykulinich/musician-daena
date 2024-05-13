@@ -24,6 +24,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -41,5 +42,20 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+}
+
+button {
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+:focus, :active {
+  outline: none;
 }
 

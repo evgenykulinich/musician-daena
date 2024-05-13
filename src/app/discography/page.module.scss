@@ -9,6 +9,7 @@
 .container {
   @include container;
 }
+
 .wrapper {
   @media (width < $width-sm) {
   }
@@ -19,7 +20,7 @@
   font-weight: $fw-bold;
   display: inline-block;
   @include header-margin;
-  @include link-animation($white)
+  @include link-animation($white);
 }
 
 .tag {
@@ -129,6 +130,13 @@
   }
 }
 
+.footer {
+  position: relative;
+  font-size: $fz-3;
+  text-align: center;
+  margin-bottom: 80px;
 
-
-
+  & a {
+    @include link-animation($white)
+  }
+}

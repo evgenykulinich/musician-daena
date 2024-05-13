@@ -63,5 +63,8 @@ export const translation = {
     album: 'Album',
     feat: 'feat',
     ep: 'EP'
+  },
+  button: {
+    goTop: 'наверх ↑'
   }
 }
