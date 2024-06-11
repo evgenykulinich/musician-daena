@@ -1,5 +1,3 @@
-import { releaseList } from '@/data/releaseList'
-
 export const translation = {
   socials: {
     vk: 'https://vk.com/daethisyou',
@@ -21,14 +19,14 @@ export const translation = {
     mainBg: 'background/main-bg.mp4'
   },
   cover: {
-    melanholiya: 'covers/melanholiya.jpg',
-    eastwest: 'covers/eastwest.jpg',
-    malh: 'covers/malh.jpg',
-    truth: 'covers/truth.jpg',
-    sberech: 'covers/sberech.jpg',
-    ivory: 'covers/ivory.jpg',
-    caucasiankid: 'covers/caucasiankid.jpg',
-    troetochie: 'covers/troetochie.jpg'
+    melanholiya: '/covers/melanholiya.avif',
+    eastwest: '/covers/eastwest.avif',
+    malh: '/covers/malh.avif',
+    truth: '/covers/truth.avif',
+    sberech: '/covers/sberech.avif',
+    ivory: '/covers/ivory.avif',
+    caucasiankid: '/covers/caucasiankid.avif',
+    troetochie: '/covers/troetochie.avif'
   },
   page: {
     layout: {

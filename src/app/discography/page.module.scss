@@ -28,14 +28,14 @@
   margin-top: 80px;
   gap: 80px;
 
-  background-image: url('/background/playlist-bg-landscape.jpg');
+  background-image: url('/background/playlist-bg-landscape.avif');
   background-size: cover;
   background-position: center;
   padding: 40px 0;
   border-radius: 20px;
 
   @media (width < $width-lg) {
-    background-image: url('/background/playlist-bg.jpg');
+    background-image: url('/background/playlist-bg.avif');
     flex-direction: column;
 
     & iframe {
