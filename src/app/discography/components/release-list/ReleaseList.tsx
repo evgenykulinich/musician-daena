@@ -6,6 +6,7 @@ export default function ReleaseList() {
     <>
       { releaseList.map(release => (
         <Release
+          key={ release.filename }
           filename={ release.filename }
           release={ release.release }
           title={ release.title }

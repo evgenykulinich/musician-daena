@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import styles from './page.module.scss'
 import { translation } from '@/constants/translation'
 import { IRelease } from '@/data/releaseList'
@@ -15,7 +17,7 @@ export function Release({
 }: IRelease) {
   return (
     <div className={ styles.cardWrapper }>
-      <img className={ styles.cover } src={ filename } alt="cover"/>
+      <Image className={ styles.cover } src={ filename } alt="cover" width={1000} height={1000}/>
       <div className={ styles.cardBody }>
         <div className={ styles.description }>
           <p className={ styles.release }>{ release }</p>
