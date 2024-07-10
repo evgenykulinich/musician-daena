@@ -18,7 +18,9 @@ export default function RootLayout({ children }:
   Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-    <body className={ font.className }>{ children }</body>
+    <body className={ font.className }>
+    { children }
+    </body>
     </html>
   )
 }
