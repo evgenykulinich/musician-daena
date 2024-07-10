@@ -94,6 +94,12 @@
       @media (width < $width-sm) {
         width: 25px;
       }
+
+      &:active {
+        @media (width > $width-sm) {
+          transform: scale(100%);
+        }
+      }
     }
   }
 }

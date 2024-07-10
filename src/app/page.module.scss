@@ -7,8 +7,9 @@
 
 .main {
   display: flex;
-  position: fixed;
   inset: 0;
+  height: 100dvh;
+  overflow: hidden;
 
   @media (width < $width-sm) {
     box-shadow: $shadow;
@@ -77,9 +78,11 @@
   & img {
     width: 40px;
     @include zoom-animation(130%, 0.2s, ease);
+  }
 
-    @media (width < $width-sm) {
-      width: 30px;
+  & img:active {
+    @media (width > $width-sm) {
+      transform: scale(100%);
     }
   }
 }
@@ -108,7 +111,7 @@
       @include zoom-animation(130%, 0.2s, ease-in-out);
 
       @media (width < $width-sm) {
-        width: 30px;
+        width: 32px;
       }
     }
   }
