@@ -1,8 +1,9 @@
-import type { Metadata } from 'next'
 import { Montserrat_Alternates } from 'next/font/google'
 
 import './globals.css'
-import { metaData } from '@/translation'
+import { metaData } from '@/data/metadata'
+
+import type { Metadata } from 'next'
 
 const font = Montserrat_Alternates({
   subsets: ['cyrillic', 'latin'],
@@ -10,7 +11,10 @@ const font = Montserrat_Alternates({
 })
 
 export const metadata: Metadata = {
-  title: metaData.layout.title,
+  title: {
+    default: metaData.layout.title,
+    template: `даена • %s`
+  },
   description: metaData.layout.description,
   metadataBase: new URL(metaData.layout.baseUrl),
   openGraph: {
@@ -22,13 +26,10 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({ children }:
-  Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-    <body className={ font.className }>
-    { children }
-    </body>
+      <body className={font.className}>{children}</body>
     </html>
   )
 }
