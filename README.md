@@ -1,20 +1,14 @@
-# Next.js Auth Flow
+# <p align="center">даена</p>
 
 <p align="center">
   <a href="https://musician-daena.vercel.app/">
-      <img src="public/preview.gif" width="768">
+      <img src="public/readme-preview.gif" width="768">
   </a>
 </p>
 
-The unofficial website of the singer-songwriter даена
+The unofficial website of the most amazing singer-songwriter даена
 
-Built with 🧡 and based on Next.js, Auth.js, Material UI, Sass/SCSS
-
-## Preview
-
-Check out a live demo by clicking here:
-
-🔗 [View Live](https://musician-daena.vercel.app/) on vercel
+Built with 🖤 and based on Next.js, TypeScript, shadcn/ui, TailwindCSS
 
 ## Status
 
@@ -24,11 +18,13 @@ Check out a live demo by clicking here:
 
 ## Tech Stack
 
-![Repo](https://img.shields.io/badge/next.js-next?labelColor=000&color=000&logo=next.js&logoColor=fff&style=for-the-badge)
-![Repo](https://img.shields.io/badge/typescript-typescript?labelColor=000&color=000&logo=typescript&logoColor=fff&style=for-the-badge)
-![Repo](https://img.shields.io/badge/mui-mui?labelColor=000&color=000&logo=mui&logoColor=fff&style=for-the-badge)
-![Repo](https://img.shields.io/badge/sass-sass?labelColor=000&color=000&logo=sass&logoColor=fff&style=for-the-badge)
-![Repo](https://img.shields.io/badge/vercel-vercel?labelColor=000&color=000&logo=vercel&logoColor=fff&style=for-the-badge)
+![Next.js](https://img.shields.io/badge/next.js-next?labelColor=000&color=000&logo=next.js&logoColor=fff&style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/typescript-typescript?labelColor=000&color=000&logo=typescript&logoColor=fff&style=for-the-badge)
+![Shadcn/ui](https://img.shields.io/badge/shadcn/ui-shadcn/ui?labelColor=000&color=000&logo=shadcnui&logoColor=fff&style=for-the-badge)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-tailwindcss?labelColor=000&color=000&logo=tailwindcss&logoColor=fff&style=for-the-badge)
+![ESLint](https://img.shields.io/badge/eslint-eslint?labelColor=000&color=000&logo=eslint&logoColor=fff&style=for-the-badge)
+![Prettier](https://img.shields.io/badge/prettier-prettier?labelColor=000&color=000&logo=prettier&logoColor=fff&style=for-the-badge)
+![Vercel](https://img.shields.io/badge/vercel-vercel?labelColor=000&color=000&logo=vercel&logoColor=fff&style=for-the-badge)
 
 ## Bugs and Issues
 
