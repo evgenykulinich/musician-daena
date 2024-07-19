@@ -21,7 +21,7 @@ export default function Discography() {
         <div className="discography-container gap-x-8 gap-y-12">
           {releases.map(release => (
             <Card
-              className="discography-item relative overflow-hidden rounded-lg border-none bg-cover text-white outline-none transition lg:hover:scale-105"
+              className="discography-item relative overflow-hidden rounded-3xl border-none bg-cover text-white outline-none transition lg:hover:scale-105"
               style={{
                 backgroundImage: `url(/covers/${release.cover})`
               }}

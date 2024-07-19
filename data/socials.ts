@@ -28,7 +28,7 @@ export const socialsList: ISocial[] = [
     href: socialLinks.vk,
     src: socialIcons.vk,
     alt: 'vk',
-    text: 'Вконтакте'
+    text: 'ВКонтакте'
   },
   {
     href: socialLinks.instagram,

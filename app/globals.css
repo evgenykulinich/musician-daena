@@ -71,23 +71,25 @@
 }
 
 .link-animation {
-  position: relative;
+  @media (width > 1024px) {
+    position: relative;
 
-  &::after {
-    content: '';
-    background-color: #ffffff;
-    border-radius: 4px;
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    height: 3px;
-    width: 0;
-    transform: translateX(-50%);
-    transition: all 0.3s ease;
-  }
+    &::after {
+      content: '';
+      background-color: #ffffff;
+      border-radius: 4px;
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      height: 3px;
+      width: 0;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+    }
 
-  &:hover::after {
-    width: 100%;
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 
@@ -101,6 +103,7 @@
     justify-content: center;
   }
 }
+
 .discography-item {
   background-color: #ffffff;
   height: 350px;
