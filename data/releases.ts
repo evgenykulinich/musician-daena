@@ -33,22 +33,22 @@ export const releases: IRelease[] = [
       {
         title: 'youtube',
         icon: socialIcons.youtube,
-        href: 'https://www.youtube.com/watch?v=I5iA-krQbVQ'
+        href: 'https://youtu.be/dz2lMW6xTDc?si=035YWfG9Ko_NGwCY'
       },
       {
         title: 'yamusic',
         icon: socialIcons.yamusic,
-        href: 'https://music.yandex.ru/album/26424655'
+        href: 'https://music.yandex.ru/album/30176663/track/123515273'
       },
       {
         title: 'spotify',
         icon: socialIcons.spotify,
-        href: 'https://open.spotify.com/album/6uAC3yrhJUjQl2bY3yniy8?si=mP_iZhM9S2u4Te-a9awwzA'
+        href: 'https://open.spotify.com/track/206MrFKy7BNO3GhHKBvjDV?si=ec848ef566af440b'
       },
       {
         title: 'itunes',
         icon: socialIcons.itunes,
-        href: 'https://music.apple.com/ru/album/eastwest/1694404422'
+        href: 'https://music.apple.com/ru/album/%D0%BC%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F-feat-%D0%B4%D0%B0%D0%B5%D0%BD%D0%B0/1735269739?i=1735269745'
       }
     ]
   },
