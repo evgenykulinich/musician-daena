@@ -20,7 +20,19 @@ export const socialIcons = {
   youtube: '/socials/youtube.svg',
   yamusic: '/socials/yamusic.svg',
   spotify: '/socials/spotify.svg',
-  itunes: '/socials/itunes.svg'
+  itunes: '/socials/itunes.svg',
+  deezer: '/socials/deezer.png',
+  mts: '/socials/mts.png'
+}
+
+export const streaming = {
+  vk: 'VK Music',
+  youtube: 'YouTube',
+  yamusic: 'Яндекс.Музыка',
+  spotify: 'Spotify',
+  itunes: 'iTunes',
+  deezer: 'Deezer',
+  mts: 'MTC Музыка'
 }
 
 export const socialsList: ISocial[] = [

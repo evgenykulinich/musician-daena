@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
 import { releases } from '@/data/releases'
 import { metaData } from '@/data/metadata'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 import type { Metadata } from 'next'
 
@@ -21,19 +22,17 @@ export default function Discography() {
         <div className="discography-container gap-x-8 gap-y-12">
           {releases.map(release => (
             <Card
-              className="discography-item relative overflow-hidden rounded-3xl border-none bg-cover text-white outline-none transition lg:hover:scale-105"
-              style={{
-                backgroundImage: `url(/covers/${release.cover})`
-              }}
+              className="discography-item card-blur relative rounded-2xl border-none text-white outline-none"
               key={release.title}
             >
-              <div
-                style={{
-                  backdropFilter: 'blur(10px) brightness(80%)',
-                  WebkitBackdropFilter: 'blur(10px) brightness(80%)'
-                }}
-                className="inset-0 flex h-full cursor-default flex-col justify-between bg-black/20 opacity-0 transition duration-500 hover:opacity-100"
-              >
+              <Image
+                className="absolute w-full rounded-3xl"
+                src={`/covers/${release.cover}`}
+                alt={''}
+                width={1000}
+                height={1000}
+              />
+              <div className="absolute inset-0 flex h-full cursor-default flex-col justify-between rounded-2xl bg-black/20 opacity-0 transition duration-500 hover:opacity-100">
                 <div>
                   <CardHeader>
                     <CardDescription className="text-white opacity-50 lg:text-lg">
@@ -51,20 +50,22 @@ export default function Discography() {
                 <CardFooter>
                   <div className="flex w-full justify-between">
                     {release.streams.map(stream => (
-                      <Link
-                        className="transition hover:scale-[120%] lg:active:scale-100"
-                        href={stream.href}
-                        target="_blank"
-                        key={stream.title}
-                      >
-                        <Image
-                          className="h-8 w-8 lg:h-10 lg:w-10"
-                          src={stream.icon}
-                          alt={stream.title}
-                          width={0}
-                          height={0}
-                        />
-                      </Link>
+                      <TooltipProvider key={stream.title}>
+                        <Tooltip delayDuration={200}>
+                          <TooltipTrigger>
+                            <Link className="" href={stream.href} target="_blank">
+                              <Image
+                                className="h-8 w-8 lg:h-9 lg:w-9"
+                                src={stream.icon}
+                                alt={stream.title}
+                                width={100}
+                                height={100}
+                              />
+                            </Link>
+                          </TooltipTrigger>
+                          <TooltipContent>{stream.title}</TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     ))}
                   </div>
                 </CardFooter>
