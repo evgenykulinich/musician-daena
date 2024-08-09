@@ -105,10 +105,21 @@
 }
 
 .discography-item {
-  background-color: #ffffff;
   height: 350px;
 
   @media (width < 1024px) {
     height: 300px;
+  }
+}
+
+.card-blur {
+  & > img {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    & > img {
+      filter: blur(2px) brightness(70%);
+    }
   }
 }

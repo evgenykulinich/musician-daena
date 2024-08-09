@@ -2,6 +2,7 @@ import { Montserrat_Alternates } from 'next/font/google'
 
 import './globals.css'
 import { metaData } from '@/data/metadata'
+import Providers from '@/components/progress/ProgressBar'
 
 import type { Metadata } from 'next'
 
@@ -63,7 +64,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

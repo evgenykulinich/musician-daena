@@ -20,16 +20,10 @@ export default function Home() {
       <header className="absolute left-[50%] top-0 z-10 flex w-full max-w-screen-2xl translate-x-[-50%] justify-between px-6 pt-6 text-2xl lg:px-8 lg:pt-8 lg:text-3xl">
         <h1 className="cursor-default font-bold">даена</h1>
         <div className="flex flex-col items-end gap-3 lg:gap-4">
-          <Link
-            className="link-animation transition active:scale-95 lg:active:transform-none"
-            href="/discography"
-          >
+          <Link className="link-animation transition" href="/discography">
             дискография
           </Link>
-          <Link
-            className="link-animation transition active:scale-95 lg:active:transform-none"
-            href="/video"
-          >
+          <Link className="link-animation transition" href="/video">
             видео
           </Link>
         </div>
