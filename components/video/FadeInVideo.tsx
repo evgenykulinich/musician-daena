@@ -21,3 +21,17 @@ export const FadeInVideo = ({ className, src, title }: Props) => {
     />
   )
 }
+
+export const MainPageBackground = () => {
+  return (
+    <video
+      className="z-1 absolute left-0 top-0 h-full w-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src="/bg/main-bg.mp4" />
+    </video>
+  )
+}
