@@ -7,6 +7,7 @@ import { Header } from '@/components/header/Header'
 import { releases } from '@/data/releases'
 import { metaData } from '@/data/metadata'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { FadeInImage } from '@/components/image/FadeInImage'
 
 import type { Metadata } from 'next'
 
@@ -25,10 +26,10 @@ export default function Discography() {
               className="discography-item card-blur relative rounded-2xl border-none text-white outline-none"
               key={release.title}
             >
-              <Image
+              <FadeInImage
                 className="absolute w-full rounded-3xl"
                 src={`/covers/${release.cover}`}
-                alt={''}
+                alt={release.title}
                 width={1000}
                 height={1000}
               />
