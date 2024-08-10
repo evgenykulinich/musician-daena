@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/drawer'
 import { Button } from '@/components/ui/button'
 import { socialsList } from '@/data/socials'
+import { MainPageBackground } from '@/components/video/FadeInVideo'
 
 export default function Home() {
   return (
@@ -62,15 +63,7 @@ export default function Home() {
         </DrawerContent>
       </Drawer>
 
-      <video
-        className="z-1 absolute left-0 top-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/bg/main-bg.mp4" />
-      </video>
+      <MainPageBackground />
     </main>
   )
 }
