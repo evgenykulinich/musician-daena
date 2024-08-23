@@ -8,7 +8,7 @@
 
 The unofficial website of the most amazing singer-songwriter даена
 
-Built with 🖤 and based on Next.js, TypeScript, shadcn/ui, TailwindCSS
+Built with 🖤 and care, based on Next.js, TypeScript, shadcn/ui, TailwindCSS
 
 ## Status
 
@@ -29,3 +29,7 @@ Built with 🖤 and based on Next.js, TypeScript, shadcn/ui, TailwindCSS
 ## Bugs and Issues
 
 Have a bug or an issue with this project? [Open a new issue](https://github.com/evgenykulinich/musician-daena/issues) here on GitHub
+
+## License
+
+This project is licensed under the [Apache License 2.0](./LICENSE). See the file for details

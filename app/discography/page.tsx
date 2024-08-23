@@ -1,21 +1,19 @@
-import Link from 'next/link'
-import Image from 'next/image'
+'use client'
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader } from '@/components/ui/card'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
-import { releases } from '@/data/releases'
-import { metaData } from '@/data/metadata'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { FadeInImage } from '@/components/image/FadeInImage'
-
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: metaData.discography.title
-}
+import { Card, CardContent, CardDescription, CardFooter, CardHeader } from '@/components/ui/card'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { releases } from '@/data/releases'
+import { useLocomotiveScroll } from '@/hooks/useLocomotiveScroll'
 
 export default function Discography() {
+  useLocomotiveScroll()
+
   return (
     <div className="mx-auto max-w-screen-2xl">
       <Header title="дискография" />
