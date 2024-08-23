@@ -1,15 +1,23 @@
 import { Montserrat_Alternates } from 'next/font/google'
 
 import './globals.css'
-import { metaData } from '@/data/metadata'
 import Providers from '@/components/progress/ProgressBar'
+import { metaData } from '@/data/metadata'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 
 const font = Montserrat_Alternates({
   subsets: ['cyrillic', 'latin'],
   weight: ['400', '700']
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false,
+  themeColor: 'black'
+}
 
 export const metadata: Metadata = {
   title: {

@@ -1,7 +1,14 @@
 {
   "name": "musician-daena",
-  "version": "0.1.0",
+  "version": "2.1.0",
   "private": true,
+  "description": "Репозиторий неофициального сайта даена",
+  "author": "Evgeny Kulinich <kulinichevgeny@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evgenykulinich/musician-daena.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,6 +23,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.0",
+    "locomotive-scroll": "^5.0.0-beta.15",
     "lucide-react": "^0.407.0",
     "next": "14.2.4",
     "next-nprogress-bar": "^2.3.13",

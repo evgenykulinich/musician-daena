@@ -1,6 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
+import { routes } from '@/constants/routes'
 import { socialsList } from '@/data/socials'
 
 export function Footer() {
@@ -27,7 +28,7 @@ export function Footer() {
       </div>
       <div className="mt-4 text-center lg:mt-8">
         <div className="mx-auto mb-4 h-[3px] w-[69px] rounded-xl bg-white/20" />
-        <Link className="link-animation cursor-pointer text-2xl" href="/">
+        <Link className="link-animation cursor-pointer text-2xl" href={routes.main}>
           ← даена
         </Link>
         <p className="mt-4 opacity-50">© даена, 2024</p>
